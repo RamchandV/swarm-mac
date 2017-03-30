@@ -11,19 +11,19 @@ for i in $(seq "${NUM_WORKERS}"); do
   docker rm --force "worker-${i}" 
 done
 printf "\ndone, press key to continue ...\n"
-read -nr1
+read -rn1
 
 # remove swarm cluster master
 printf "Removing master ...\n"
 docker swarm leave --force 
 printf "\ndone, press key to continue ...\n"
-read -nr1
+read -rn1
 
 # remove docker mirror
 printf "Removing Docker registry mirror ...\n"
 docker rm --force v2_mirror 
 printf "\ndone, press key to continue ...\n"
-read -nr1
+read -rn1
 
 # remove swarm visuzalizer
 printf "Removing Swarm Visualizer ...\n"
