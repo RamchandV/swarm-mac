@@ -91,7 +91,7 @@ $(tput sgr 0)"
 docker run -it -d --name swarm_visualizer \
   -p 8080:8080 -e HOST=localhost \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  manomarks/visualizer
+  dockersamples/visualizer
 
 printf "\npress key to continue ...\n"
 read -rn1
